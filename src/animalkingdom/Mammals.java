@@ -22,7 +22,7 @@ public class Mammals extends AbstractAnimals
     @Override
     public String getReproduce()
     {
-        return "Live Births";
+        return "Live Birth";
     }
 
     @Override

@@ -81,14 +81,20 @@ public class Main
         System.out.println();
 
         // list animals that lay eggs and breath with lungs
-        System.out.println("*** Animals that lay Eggs and Breath with Lungs");
+        System.out.println("*** Animals that lay Eggs and Breath with Lungs ***");
         printAnimals(animalList, a -> (a.getBreath() == "Lungs") && (a.getReproduce() == "Eggs"));
         System.out.println();
 
         // list alphabetically animals named in 1758
-        System.out.println("*** Animals Discovered in 1758 in Alphabetical Order");
+        System.out.println("*** Animals Discovered in 1758 in Alphabetical Order ***");
         animalList.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
         printAnimals(animalList, a -> a.getYearDiscovered() == 1758);
+        System.out.println();
+
+        // stretch
+        System.out.println("*** Stretch ***");
+        animalList.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
+        printAnimals(animalList, a -> a.getReproduce() == "Live Birth");
         System.out.println();
     }
 }
