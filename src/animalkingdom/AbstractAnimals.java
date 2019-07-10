@@ -4,6 +4,7 @@ public abstract class AbstractAnimals
 {
     // fields
     private static int maxId = 0;
+    private int id;
     private String name;
     private int yearDiscovered;
 
@@ -11,7 +12,7 @@ public abstract class AbstractAnimals
     public AbstractAnimals(String name, int yearDiscovered)
     {
         maxId++;
-        this.id = maxId;
+        id = maxId;
         this.name = name;
         this.yearDiscovered = yearDiscovered;
     }
@@ -45,5 +46,10 @@ public abstract class AbstractAnimals
     public void setYearDiscovered(int yearDiscovered)
     {
         this.yearDiscovered = yearDiscovered;
+    }
+
+    public int getId()
+    {
+        return id;
     }
 }
