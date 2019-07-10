@@ -72,6 +72,23 @@ public class Main
 
         // list animals that breath with lungs
         System.out.println("*** Animals with Lungs ***");
+        printAnimals(animalList, a -> a.getBreath() == "Lungs");
+        System.out.println();
 
+        // list animals that breath with lungs and were named in 1758
+        System.out.println("*** Animals with Lungs Named in 1758 ***");
+        printAnimals(animalList, a -> (a.getBreath() == "Lungs") && (a.getYearDiscovered() == 1758));
+        System.out.println();
+
+        // list animals that lay eggs and breath with lungs
+        System.out.println("*** Animals that lay Eggs and Breath with Lungs");
+        printAnimals(animalList, a -> (a.getBreath() == "Lungs") && (a.getReproduce() == "Eggs"));
+        System.out.println();
+
+        // list alphabetically animals named in 1758
+        System.out.println("*** Animals Discovered in 1758 in Alphabetical Order");
+        animalList.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
+        printAnimals(animalList, a -> a.getYearDiscovered() == 1758);
+        System.out.println();
     }
 }
