@@ -4,6 +4,16 @@ import java.util.*;
 
 public class Main 
 {
+    public static void printAnimals(ArrayList<AbstractAnimals> animals, CheckAnimal tester)
+    {
+        for (AbstractAnimals a : animals)
+        {
+            if (tester.test(a))
+            {
+                System.out.println(a);
+            }
+        }
+    }
     
     public static void main(String[] args)
     {
@@ -45,13 +55,23 @@ public class Main
         // list animals in descending order by date named
         System.out.println("*** Animals in Descending Order by Date ***");
         animalList.sort((o1, o2) -> o2.getYearDiscovered() - o1.getYearDiscovered());
-        System.out.println(animalList);
+        animalList.forEach(a -> System.out.println(a));
         System.out.println();
 
         // list animals alphabetically
-        System.out.println("*** Animals in Alphabetical Order");
+        System.out.println("*** Animals in Alphabetical Order ***");
         animalList.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
-        System.out.println(animalList);
+        animalList.forEach(a -> System.out.println(a));
         System.out.println();
+
+        // list Animals by Movement
+        System.out.println("*** Animals By Movement ***");
+        animalList.sort((o1, o2) -> o1.getMove().compareToIgnoreCase(o2.getMove()));
+        animalList.forEach(a -> System.out.println(a + " " + a.getMove()));
+        System.out.println();
+
+        // list animals that breath with lungs
+        System.out.println("*** Animals with Lungs ***");
+
     }
 }

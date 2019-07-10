@@ -28,6 +28,6 @@ public class Fish extends AbstractAnimals
     @Override
     public String toString()
     {
-        return "Fish {" + " name = " + getName() + ", year discovered = " + getYearDiscovered() + " }" + "\n";
+        return "Fish {" + " name = " + getName() + ", year discovered = " + getYearDiscovered() + " }";
     }
 }
