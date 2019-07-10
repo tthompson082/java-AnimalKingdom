@@ -28,6 +28,6 @@ public class Mammals extends AbstractAnimals
     @Override
     public String toString()
     {
-        return "Mammal {" + " name = " + getName() + ", year discovered = " + getYearDiscovered() + " }";
+        return "Mammal {" + " name = " + getName() + ", year discovered = " + getYearDiscovered() + " }" + "\n";
     }
 }

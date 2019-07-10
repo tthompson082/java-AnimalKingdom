@@ -28,6 +28,6 @@ public class Birds extends AbstractAnimals
     @Override
     public String toString()
     {
-        return "Bird {" + " name = " + getName() + ", year discovered = " + getYearDiscovered() + " }";
+        return "Bird {" + " name = " + getName() + ", year discovered = " + getYearDiscovered() + " }" + "\n";
     }
 }

@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Main 
 {
+    
     public static void main(String[] args)
     {
         Mammals panda = new Mammals("Panda", 1869);
@@ -23,5 +24,27 @@ public class Main
         Fish salmon = new Fish("Salmon", 1758);
         Fish catfish = new Fish("Catfish", 1817);
         Fish perch = new Fish("Perch", 1758);
+
+        ArrayList<AbstractAnimals> animalList = new ArrayList<>();
+        animalList.add(panda);
+        animalList.add(zebra);
+        animalList.add(koala);
+        animalList.add(sloth);
+        animalList.add(armadillo);
+        animalList.add(raccoon);
+        animalList.add(bigfoot);
+        animalList.add(pigeon);
+        animalList.add(peacock);
+        animalList.add(toucan);
+        animalList.add(parrot);
+        animalList.add(swan);
+        animalList.add(salmon);
+        animalList.add(catfish);
+        animalList.add(perch);
+
+        // list animals in descending order by date named
+        System.out.println("*** Animals in Descending Order by Date ***");
+        animalList.sort((o1, o2) -> o2.getYearDiscovered() - o1.getYearDiscovered());
+        System.out.println(animalList);
     }
 }
